@@ -1,0 +1,74 @@
+blocks:
+    - type: prompt
+      alignment: left
+      segments:
+        - leading_diamond: ╭─
+          foreground: '#000000'
+          background: '#d3d7cf'
+          type: os
+          style: diamond
+        - properties:
+            battery_icon: ""
+            charged_color: '#4caf50'
+            charged_icon: ' '
+            charging_color: '#40c4ff'
+            charging_icon: ' '
+            color_background: true
+            discharging_color: '#ff5722'
+            discharging_icon: ' '
+            display_charged: true
+            display_charging: true
+            postfix: ' '
+          foreground: '#193549'
+          powerline_symbol: 
+          background: '#ffeb3b'
+          type: battery
+          style: powerline
+        - properties:
+            prefix: '  '
+            style: folder
+          leading_diamond: <transparent,#ff479c></>
+          trailing_diamond: 
+          foreground: '#ffffff'
+          powerline_symbol: 
+          background: '#ff479c'
+          type: path
+          style: diamond
+        - type: git
+          style: powerline
+          foreground: '#193549'
+          powerline_symbol: 
+          background: '#fffb38'
+        - properties:
+            display_mode: context
+            fetch_sdk_version: true
+          template: "  {{ .Full }} "
+          foreground: '#ffffff'
+          powerline_symbol: 
+          background: '#6B46C1'
+          type: dotnet
+          style: powerline
+        - template: "  {{ .Full }} "
+          foreground: '#ffffff'
+          powerline_symbol: 
+          background: '#6CA35E'
+          type: node
+          style: powerline
+        - template: '  '
+          foreground: '#18354c'
+          powerline_symbol: 
+          background: '#ffc107'
+          type: root
+          style: powerline
+        - properties:
+            style: austin
+            threshold: 0
+          template: " 󰔟 {{ .FormattedMs }} "
+          leading_diamond: <transparent,#26BDBB></>
+          trailing_diamond: 
+          foreground: '#0C212F'
+          background: '#26BDBB'
+          type: executiontime
+          style: diamond
+version: 3
+final_space: true
