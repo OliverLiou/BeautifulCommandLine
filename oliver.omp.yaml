@@ -1,74 +1,93 @@
-blocks:
-    - type: prompt
-      alignment: left
-      segments:
-        - leading_diamond: ╭─
-          foreground: '#000000'
-          background: '#d3d7cf'
-          type: os
-          style: diamond
-        - properties:
-            battery_icon: ""
-            charged_color: '#4caf50'
-            charged_icon: ' '
-            charging_color: '#40c4ff'
-            charging_icon: ' '
-            color_background: true
-            discharging_color: '#ff5722'
-            discharging_icon: ' '
-            display_charged: true
-            display_charging: true
-            postfix: ' '
-          foreground: '#193549'
-          powerline_symbol: 
-          background: '#ffeb3b'
-          type: battery
-          style: powerline
-        - properties:
-            prefix: '  '
-            style: folder
-          leading_diamond: <transparent,#ff479c></>
-          trailing_diamond: 
-          foreground: '#ffffff'
-          powerline_symbol: 
-          background: '#ff479c'
-          type: path
-          style: diamond
-        - type: git
-          style: powerline
-          foreground: '#193549'
-          powerline_symbol: 
-          background: '#fffb38'
-        - properties:
-            display_mode: context
-            fetch_sdk_version: true
-          template: "  {{ .Full }} "
-          foreground: '#ffffff'
-          powerline_symbol: 
-          background: '#6B46C1'
-          type: dotnet
-          style: powerline
-        - template: "  {{ .Full }} "
-          foreground: '#ffffff'
-          powerline_symbol: 
-          background: '#6CA35E'
-          type: node
-          style: powerline
-        - template: '  '
-          foreground: '#18354c'
-          powerline_symbol: 
-          background: '#ffc107'
-          type: root
-          style: powerline
-        - properties:
-            style: austin
-            threshold: 0
-          template: " 󰔟 {{ .FormattedMs }} "
-          leading_diamond: <transparent,#26BDBB></>
-          trailing_diamond: 
-          foreground: '#0C212F'
-          background: '#26BDBB'
-          type: executiontime
-          style: diamond
 version: 3
 final_space: true
+
+blocks:
+  - type: prompt
+    alignment: left
+    segments:
+      # OS 指示器
+      - type: os
+        style: diamond
+        leading_diamond: ╭─
+        foreground: '#000000'
+        background: '#d3d7cf'
+
+      # 電池狀態
+      - type: battery
+        style: powerline
+        foreground: '#193549'
+        background: '#ffeb3b'
+        powerline_symbol: 
+        properties:
+          battery_icon: '   '
+          color_background: true
+          display_charged: true
+          display_charging: true
+          charged_color: '#4caf50'
+          charged_icon: ' '
+          charging_color: '#40c4ff'
+          charging_icon: ' '
+          discharging_color: '#ff5722'
+          discharging_icon: ' '
+          postfix: ' '
+
+      # 目前路徑
+      - type: path
+        style: diamond
+        leading_diamond: <transparent,#ff479c></>
+        trailing_diamond: 
+        foreground: '#ffffff'
+        background: '#ff479c'
+        powerline_symbol: 
+        template: "  {{ .Path }} "
+        properties:
+          style: folder
+          folder_icon: ' '
+      # Git 狀態
+      - type: git
+        style: powerline
+        foreground: '#193549'
+        background: '#fffb38'
+        powerline_symbol: 
+        properties:
+          branch_icon: ' '
+
+      # .NET SDK 版本
+      - type: dotnet
+        style: powerline
+        template: "  {{ .Full }} "
+        foreground: '#ffffff'
+        background: '#6B46C1'
+        powerline_symbol: 
+        properties:
+          display_mode: context
+          fetch_sdk_version: true
+
+      # Node.js 版本
+      - type: node
+        style: powerline
+        template: "  {{ .Full }} "
+        foreground: '#ffffff'
+        background: '#6CA35E'
+        powerline_symbol: 
+
+      # Root 用戶指示器
+      - type: root
+        style: powerline
+        template: '  '
+        foreground: '#18354c'
+        background: '#ffc107'
+        powerline_symbol:  
+
+      # 命令執行時間
+      - type: executiontime
+        style: diamond
+        template: " 󰔟 {{ .FormattedMs }}"
+        leading_diamond: <transparent,#26BDBB></>
+        trailing_diamond: 
+        foreground: '#0C212F'
+        background: '#26BDBB'
+        properties:
+          style: austin
+          threshold: 500
+          always_enabled: true
