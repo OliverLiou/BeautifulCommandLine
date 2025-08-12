@@ -10,7 +10,7 @@
 
 ## Step2 複製檔案
 
-將 oliver.omp.yaml 檔案複製到 C:\Users\{userName}\AppData\Local\Programs\oh-my-posh\themes
+將 `oliver.omp.yaml` 檔案複製到 `C:\Users\{userName}\AppData\Local\Programs\oh-my-posh\themes`
 
 注意: **{userName}** 請根據自己電腦環境命名
 
