@@ -2,6 +2,10 @@
 
 [![BeautifulCommandLine](/Sample.PNG "BeautifulCommandLineSample")](https://github.com/OliverLiou/BeautifulCommandLine/Sample.PNG)
 
+[![BeautifulCommandLine](/Sample2.PNG "BeautifulCommandLineSample2")](https://github.com/OliverLiou/BeautifulCommandLine/Sample2.PNG)
+
+[![BeautifulCommandLine](/Sample3.PNG "BeautifulCommandLineSample3")](https://github.com/OliverLiou/BeautifulCommandLine/Sample3.PNG)
+
 ## **必要安裝與設定, 請先參考保哥教學**
 
 [will保哥-如何打造一個華麗又實用的 PowerShell 命令輸入環境][01].
