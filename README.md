@@ -7,17 +7,17 @@
 
 ## Step2 複製檔案
 
-    [Tab]將oliver.omp.yaml檔案複製到 C:\Users\{userName}\AppData\Local\Programs\oh-my-posh\themes
+    將oliver.omp.yaml檔案複製到 C:\Users\{userName}\AppData\Local\Programs\oh-my-posh\themes
 
 ## Step3 執行使用主題指令
 
-    ```
+    ```powershell
     oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\oliver.omp.yaml"  | Invoke-Expression
     ```
 
 ## Step4 執行命令加入到 $PROFILE 啟動設定檔中
 
-    ```
+    ```powershell
     'oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\oliver.omp.yaml"  | Invoke-Expression' | Out-File -LiteralPath $PROFILE -Append -Encoding utf8
     ```
     
