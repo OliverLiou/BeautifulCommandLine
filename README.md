@@ -1,4 +1,8 @@
-# **必要安裝與設定, 請先參考保哥教學**
+# 使用說明與範例
+
+[![BeautifulCommandLine](/Sample.PNG "BeautifulCommandLineSample")](https://github.com/OliverLiou/BeautifulCommandLine/Sample.PNG)
+
+## **必要安裝與設定, 請先參考保哥教學**
 
 [will保哥-如何打造一個華麗又實用的 PowerShell 命令輸入環境][01].
 
